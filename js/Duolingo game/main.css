@@ -9,3 +9,11 @@
     display: none;
     font: 1em sans-serif;
 }
+
+.word{
+    margin: 10px;
+}
+
+.choosen-word{
+    margin: 3px;
+}
