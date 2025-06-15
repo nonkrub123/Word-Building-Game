@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+    }
+    .container {
+        background-color: #ffffff;
+        border: 2px solid #333;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+    .grid-container{
+        display: grid;
+        gap: 5px;
+        border: 10px solid rgb(222, 222, 222);
+    }
+    .grid-container > div {
+        border: 2px solid rgb(201, 201, 201)
+    }
+    .item {
+        background-color: #ff0303;
+        text-align: center;
+        padding: 40px;
+        font-size: 20px;
+        color: white;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    .item:nth-child(even){
+        background-color: #00c8ff;
+    }
+    .item:hover{
+        background-color: #00ff88;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>This is the first one</h1>
+        <div class="grid-container" style="grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(3, 100px);">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>2.Different column size</h1>
+        <div class="grid-container" style="grid-template-columns: 1fr 2fr 1fr; 
+        grid-template-rows: repeat(3, 100px);">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        </div>
+    </div>
+    <div class="container">
+        
+        <h1>3.Gap in the grid</h1>
+        <div class="grid-container" style="grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(3, 100px); gap: 40px;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>4.Grid placement </h1>
+        <div class="grid-container" style="    grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(4, 100px);">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item" style="grid-column: 1/span 2; grid-row: 2/span2;">5</div>
+            <div class="item" style="grid-column: 3/span 2; grid-row: 2/span2;">6</div>
+            <div class="item" style="grid-column: 1/span3;">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>5. Grid Template Areas</h1>
+        <div class="grid-container" style="grid-template-areas: 'a-header a-header a-header'
+        'a-main-content a-main-content a-sidebar'
+        'a-footer a-footer a-footer';">
+            <div class="item" style="grid-area: a-header;">Header</div>
+            <div class="item" style="grid-area: a-main-content;">Main cobntent</div>
+            <div class="item" style="grid-area: a-sidebar;">Side bar</div>
+            <div class="item" style="grid-area: a-footer;">footer</div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>6.auto fit</h1>
+        <div class="grid-container" style="grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>7.Alignment and Justification</h1>
+        <div class="grid-container" style="grid-template-columns: repeat(3, 100px);
+        height: 200px; align-items: center; justify-content: space-evenly;">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>8.Nested Grids</h1>
+        <div class="grid-container" style="grid-template-columns: 1fr 1fr; justify-content: center;">
+            <div class="item">1</div>
+            <div class="grid-container" style="grid-template-columns: 1fr 1fr;" >
+                <div class="item" style="background-color: #0f8d5283;">2.1</div>
+                <div class="item" style="background-color: #0f8d5283;">2.2</div>
+                <div class="item" style="background-color: #0f8d5283;">2.3</div>
+                <div class="item" style="background-color: #0f8d5283;">2.4</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <h1>9,Grid with Auto Rows</h1>
+        <div class="grid-container" style="grid-template-columns: repeat(3, 1fr); grid-auto-columns: minmax(100px, auto);">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item" style="padding: 40px">
+                5 (taller content) and there is more content
+              </div>
+              <div class="item">6</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #b0dec7;
+    display: flex;
+}
+#sourceWords{
+    display: flex;
+    flex-direction: column;
+}
+.hidden{
+    display: none;
+    font: 1em sans-serif;
+}
+
+.word {
+    display: inline-block;  /* Makes it behave like inline but allows width/height */
+    margin: 5px;           /* Space between words */
+    padding: 5px;          /* Space inside the word container */
+    background: #ffffff;   /* Optional: gives a visual boundary */
+    border-radius: 3px;    /* Optional: makes it look more button-like */
+    cursor:grab;       /* Changes mouse cursor when hovering */
+    color: black;
+}
+
+.choosen-word{
+    display: inline-block;
+    margin: 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea{
+    resize: none;
+}

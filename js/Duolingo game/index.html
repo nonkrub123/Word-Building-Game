@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-section">
+            <h1>Duolingo building sentence game</h1>
+            <label>Input sentence</label>
+            <textarea name="inputArea" id="inputSentence"></textarea>
+            <button id="submit">submit</button><br>
+            <button id="start-game">Start the game</button>
+        </div>
+
+
+        <div class="game-section hidden">
+            <div class="target-area">
+                <h2>Build sentences in order using those scatter words!</h2>
+                <div class="word-container" id="targetWords"></div>
+            </div>
+
+            <div class="button">
+                <button id="checkSentences">Done</button>
+                <button id="removelastword">Remove last word</button>
+                <button id="clearallword">Clear all word</button>
+            </div>
+
+            <div class="source-area">
+                <h2>Available Words</h2>
+                <div class="word-container" id="sourceWords"></div>
+            </div>
+        </div>
+
+
+        <div class="feedback-section hidden">
+            <div id="feedbackMessage"></div>
+            <div id="correctWord"></div>
+            <button id="nextSentence">Go to next sentence</button>
+        </div>
+
+        <div class="pause-menu"></div>
+        <div class="count-timer"></div>
+    </div>
+</body>
+<style></style>
+<script src="./script.js"></script></html>
+
